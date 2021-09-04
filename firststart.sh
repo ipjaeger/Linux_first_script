@@ -2,14 +2,21 @@
 
 echo "This may take a while!!!"
 echo "Are you sure you want to do this? (y/n)"
-read answer
+read gonogo
 
-if [ $answer = "y" ] || [ $answer = "Y" ]
+echo "Do you want to install git? (y/n)"
+read getgit
+
+
+if [ $gonogo = "y" ] || [ $gonogo = "Y" ]
   then
-    apt-get update
-    apt-get upgrade -y
-    apt-get install git -y
-    apt-get clean
+    apt update
+    apt upgrade -y
+    if [ $getgit = "y" ] || [ $getgit = "Y" ]
+      then
+        apt-get install git -y
+    fi
+    apt clean
     echo " "
     echo "You should reboot your system now."
     echo "Do you want to reboot now? (y/n)"
