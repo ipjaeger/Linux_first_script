@@ -1,2 +1,4 @@
 firststart.sh is a Linux script you can run after the initial install that combines a number of commands that are important to do when you first set up a new system.
 
+This must be executed from the terminal using the SUDO command:
+sudo ./firststart.sh
