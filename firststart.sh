@@ -14,7 +14,7 @@ if [ $gonogo = "y" ] || [ $gonogo = "Y" ]
     apt upgrade -y
     if [ $getgit = "y" ] || [ $getgit = "Y" ]
       then
-        apt-get install git -y
+        apt install git -y
     fi
     apt clean
     echo " "
