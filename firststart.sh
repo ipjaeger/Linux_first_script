@@ -17,7 +17,7 @@ if [ $gonogo = "y" ] || [ $gonogo = "Y" ]
     apt upgrade -y
     if [ $getssh = "y" ] || [ $getssh = "Y" ]
       then
-        apt install openssh-server
+        apt install openssh-server -y
         systemctl enable ssh
         ufw allow ssh
     fi
